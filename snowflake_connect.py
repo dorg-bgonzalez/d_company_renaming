@@ -35,11 +35,3 @@ results = get_query(query)
 
 # makes a csv copy of the data being queried
 results.to_csv("stored_snowflake_query_test_new_creds.csv", index=False)
-
-
-# flatten df
-# clean_df = expand_list(all_fields_df, 'company', 'flat_company')
-# join people records to clean df
-# clean_df = pd.merge(all_fields_df, domain_df[['c_id', 'number_of_silver_records_in_person_index', 'number_of_records_in_person_index']], on='c_id', how='left')
-# sort new df by people records by people records
-# clean_df.sort_values(by=['number_of_silver_records_in_person_index', 'number_of_records_in_person_index'], ascending=False, inplace=True)
