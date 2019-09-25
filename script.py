@@ -128,15 +128,3 @@ proper_company_name(main_df, 'd_url', 'd_company', 'd_company_ext_names')
 # adding new column with suggested name
 main_df['suggested_name'] = proper_company_name(main_df, 'd_url', 'd_company', 'd_company_ext_names')
 
-# write results to csv
-# main_df.to_csv('suggested_name_1st_pass.csv', index=False)
-
-# write smaller file
-# cpy_results = main_df[['c_id', 'd_company', 'display_name', 'suggested_name']]
-# cpy_results.to_csv('trimmed_results_2pass.csv', index=False)
-
-# cpy_results[cpy_results['suggested_name'] == ''].index
-
-# index df to see how many rows have a domain in
-main_df[main_df['suggested_name'] == '']
-# main_df[main_df['suggested_name'].str.contains('www.') | main_df['suggested_name'].str.contains('\.') &  ~main_df['suggested_name'].str.contains('\ ')]
